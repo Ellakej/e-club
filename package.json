@@ -7,8 +7,6 @@
     "start": "live-server"
   },
   "devDependencies": {
-    "budo": "^7.0.0",
-    "ghpages": "0.0.3"
   },
   "keywords": [
     "aframe",
