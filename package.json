@@ -4,9 +4,7 @@
   "version": "0.3.0",
   "license": "MIT",
   "scripts": {
-    "start": "budo --live --verbose --port 3000 --open",
-    "deploy": "ghpages",
-    "ghpages": "ghpages"
+    "start": "live-server"
   },
   "devDependencies": {
     "budo": "^7.0.0",
@@ -22,3 +20,4 @@
   ],
   "dependencies": {}
 }
+
