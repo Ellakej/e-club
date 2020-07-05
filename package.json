@@ -4,10 +4,10 @@
   "version": "0.3.0",
   "license": "MIT",
   "scripts": {
+    "watch": "cross-env NODE_ENV=development parcel index.html --no-hmr ",
     "start": "live-server"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "keywords": [
     "aframe",
     "aframe-example",
@@ -16,6 +16,17 @@
     "webvr",
     "vr"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "babel-core": "~6.26.3",
+    "babel-plugin-transform-runtime": "~6.23.0",
+    "babel-polyfill": "~6.26.0",
+    "babel-preset-env": "~1.7.0",
+    "clang-format": "~1.2.2",
+    "cross-env": "^5.2.0",
+    "dat.gui": "~0.7.2",
+    "eslint": "~4.19.1",
+    "eslint-config-google": "~0.9.1",
+    "parcel-bundler": "~1.12.4",
+    "yalc": "~1.0.0-pre.23"
+  }
 }
-

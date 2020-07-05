@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>E-Club</title>
+    <meta name="description" content="Hello, World! - A-Frame">
+    <!--Nucleo de Aframe-->
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <!--Extensión de físicas para Aframe-->
+    <script src="https://unpkg.com/aframe-physics-system@1.4.0/dist/aframe-physics-system.min.js"></script>
+
+  </head>
+  <body>
+    <a-scene stats="" physics="">
+      <!--Anidamiento del control de las manos dentro de la camara-->
+      <!--Control bloqueado del movimiento así como posicion inicial de la camara-->
+      <a-entity look-controls="" position="-0.4 1.5 0">
+        <!--Esto activa el cursor-->
+        <a-cursor></a-cursor>
+        <!--Mano (prueba)-->
+        <a-entity position="0 0 -3" id="hands">
+            <!--Caja de la mano (prueba)-->
+            <a-box color="gray" width="0.25" height="0.5" depth="3" static-body=""></a-box>
+        </a-entity>
+    </a-entity>
+
+    <!--Componentes de la cancha-->
+    <a-entity id="cancha" position="0 0.3 -6.4" scale="1">
+      <!--Base cilindrica-->
+      <a-cylinder position="0 0.8 -6.4" color="#FF8000" height="3" radius="0.29"></a-cylinder>
+      <!--Extencion 1-->
+      <a-cylinder position=" 0 3 -6.4" color="gray" height="1.4" radius="0.08"></a-cylinder>
+      <!--Extencion 2-->
+      <a-cylinder position=" 0 3.25 -6.05" color="gray" height="1" radius="0.08" rotation="45 0 0"></a-cylinder>
+      <!--Extension 3-->
+      <a-cylinder position=" 0 3.6 -6" color="gray" height="0.8" radius="0.08" rotation="90 0 0"></a-cylinder>
+
+      <!--Cuadro-->
+      <a-box position=" 0 3.1 -5.6" color="white" height="1.3" depth="0.07" width="2.2"></a-box>
+
+      <!--Cesto-->
+      <a-entity id="cesto" position="0 2.7 -5.5">
+        <!--Base-soporte-->
+        <a-box position="0 0 0" color="red" height="0.05" depth="0.2" width="0.4"></a-box>
+        <!--LineaSoporte1-->
+        <a-cylinder position="-0.14 -0.1 0" color="red" height="0.2" radius="0.03" rotation="45 0 0">
+        <!--LineaSoporte2-->
+        <a-cylinder position="0.28 0 0" color="red" height="0.2" radius="0.03">
+      </a-cylinder></a-cylinder></a-entity>
+
+       <!--Aro-->
+
+       <a-torus position="0 2.7 -5.15" color="red" radius="0.3" radius-tubular="0.015" rotation="90 80 0">
+      
+
+
+    </a-torus></a-entity>
+
+      <!--Pelota-->
+      <a-entity id="ball" position="0.5 1 -4" material="color:#FF8000;" geometry="primitive:sphere; radius: 0.5;" dynamic-body=""></a-entity>
+
+      <!--Base-->
+      <a-plane color="#9C9C9C" rotation="-90 0 0" width="100" height="100" static-body=""></a-plane>
+
+      <!--Cielo-->
+      <a-sky color="#252850"></a-sky>
+    </a-scene>
+  </body>
+</html>
