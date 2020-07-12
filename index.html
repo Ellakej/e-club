@@ -9,12 +9,16 @@
     <!--Extensión de físicas para Aframe-->
     <script src="https://unpkg.com/aframe-physics-system@1.4.0/dist/aframe-physics-system.min.js"></script>
 
+    
+    
+
   </head>
   <body>
-    <a-scene stats physics>
+    <a-scene stats physics foo>
+      <h1>Página Principal</h1>
       <!--Anidamiento del control de las manos dentro de la camara-->
       <!--Control bloqueado del movimiento así como posicion inicial de la camara-->
-      <a-entity  look-controls position="-0.4 1.5 0">
+      <a-entity  look-controls id="manoGlobal">
         <!--Esto activa el cursor-->
         <a-cursor></a-cursor>
         <!--Mano (prueba)-->
@@ -25,7 +29,7 @@
         </a-entity>
     </a-entity>
 
-    <!--Componentes de la cancha-->
+    <!--Partes de la cancha-->
     <a-entity id="cancha" position="0 0.3 -6.4" scale="1">
       <!--Base cilindrica-->
       <a-cylinder position = "0 0.8 -6.4" color="#FF8000" height="3" radius="0.29"></a-cylinder>
@@ -72,5 +76,6 @@
       <!--Cielo-->
       <a-sky color="#252850"></a-sky>
     </a-scene>
+    <script src="/index.js" ></script>
   </body>
 </html>
