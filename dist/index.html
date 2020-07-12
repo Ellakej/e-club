@@ -16,6 +16,25 @@
   <body>
     <a-scene stats="" physics="" foo="">
       <h1>Página Principal</h1>
+
+      <div id="video-wrapper">
+
+        <video id="video" playsinline="" style="
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        visibility: hidden;
+        width: auto;
+        height: auto;
+        position: absolute;
+        ">
+        </video>
+
+        <div id="info" style="display:none"></div>
+
+
+      </div>
+
+
       <!--Anidamiento del control de las manos dentro de la camara-->
       <!--Control bloqueado del movimiento así como posicion inicial de la camara-->
       <a-entity look-controls="" id="manoGlobal">

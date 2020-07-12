@@ -1,22 +1,16 @@
 {
-  "name": "aframe-hello-world-boilerplate",
-  "description": "Boilerplate with A-Frame's 'Hello, World!' of WebVR.",
-  "version": "0.3.0",
+  "name": "e-club",
+  "description": "Interactive game with A-frame and Tensorflow.js",
+  "version": "0.2",
   "license": "MIT",
   "scripts": {
     "watch": "cross-env NODE_ENV=development parcel index.html --no-hmr ",
-    "start": "live-server"
+    "start": "live-server",
+    "build": "cross-env NODE_ENV=production parcel build index.html --public-url ./",
+    "lint": "eslint .",
+    "link-local": "yalc link @tensorflow-models/handpose"
   },
-  "devDependencies": {},
-  "keywords": [
-    "aframe",
-    "aframe-example",
-    "aframe-boilerplate",
-    "aframe-scene",
-    "webvr",
-    "vr"
-  ],
-  "dependencies": {
+  "devDependencies": {
     "babel-core": "~6.26.3",
     "babel-plugin-transform-runtime": "~6.23.0",
     "babel-polyfill": "~6.26.0",
@@ -28,5 +22,22 @@
     "eslint-config-google": "~0.9.1",
     "parcel-bundler": "~1.12.4",
     "yalc": "~1.0.0-pre.23"
+  },
+  "keywords": [
+    "aframe",
+    "aframe-example",
+    "aframe-boilerplate",
+    "aframe-scene",
+    "webvr",
+    "vr",
+    "tensorflow",
+    "hand-recognition",
+    "interactive-game"
+  ],
+  "dependencies": {
+    "@tensorflow-models/handpose": "0.0.5",
+    "@tensorflow/tfjs": "2.0.1",
+    "@tensorflow/tfjs-backend-wasm": "2.0.1",
+    "live-server": "^1.2.1"
   }
 }
